@@ -11,7 +11,7 @@ android {
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "0.0.2"
+        versionName "0.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -31,6 +31,7 @@ android {
 
     kotlinOptions {
         jvmTarget = '1.8'
+        useIR = true
     }
 }
 
@@ -46,7 +47,7 @@ afterEvaluate {
 
                 groupId = 'com.github.suryojiwandono'
                 artifactId = 'coachmark'
-                version = '0.0.2'
+                version = '0.0.3'
             }
         }
     }
