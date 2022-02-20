@@ -5,13 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 30
 
     defaultConfig {
         minSdk 21
-        targetSdk 31
-        versionCode 1
-        versionName "0.0.1"
+        targetSdk 30
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -46,7 +44,7 @@ afterEvaluate {
 
                 groupId = 'com.github.suryojiwandono'
                 artifactId = 'coachmark'
-                version = '0.0.1'
+                version = '0.0.3'
             }
         }
     }
