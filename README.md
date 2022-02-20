@@ -3,6 +3,7 @@
 Setup
 [![](https://jitpack.io/v/suryojiwandono/coachmark.svg)](https://jitpack.io/#suryojiwandono/coachmark)
 ====
+1. Add it in your root build.gradle at the end of repositories:
 ~~~
 allprojects {
   repositories {
@@ -11,6 +12,18 @@ allprojects {
   }
 }
 ~~~
+Or
+~~~
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+~~~
+
+2. Add the dependency:
 ~~~
 dependencies {
   ...
