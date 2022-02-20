@@ -1,6 +1,6 @@
 # coachmark
 
-###Setup
+Setup
 [![](https://jitpack.io/v/suryojiwandono/coachmark.svg)](https://jitpack.io/#suryojiwandono/coachmark)
 ====
 ~~~
@@ -31,7 +31,7 @@ If you're using Maven, you can add the APKlib as a dependency:
 
 ## License
 ```
-Copyright 2021 Muh Fuad Afdhal
+Copyright 2022 Suryo Jiwandono Guntoro
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
