@@ -27,7 +27,7 @@ dependencyResolutionManagement {
 ~~~
 dependencies {
   ...
-  implementation 'com.github.suryojiwandono:coachmark:0.0.2'
+  implementation 'com.github.suryojiwandono:coachmark:0.0.3'
 }
 ~~~
 
@@ -37,7 +37,7 @@ If you're using Maven, you can add the APKlib as a dependency:
 <dependency>
     <groupId>com.github.suryojiwandono</groupId>
     <artifactId>coachmark</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 </dependency>
 ```
 
