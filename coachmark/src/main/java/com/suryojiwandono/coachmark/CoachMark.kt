@@ -38,7 +38,7 @@ class CoachMark constructor(
         return this
     }
 
-    fun circle(activity: Activity): CoachMark {
+    fun circle(activity: Activity, margin: Int = 20): CoachMark {
         val location = IntArray(2)
         view?.getLocationInWindow(location)
 
@@ -51,8 +51,8 @@ class CoachMark constructor(
             location[1] + height - CoachMarkDialog.getStatusBarHeight(activity)
         val xCenter = (xStart + xEnd) / 2
         val yCenter = (yStart + yEnd) / 2
-        val radius: Int = width * 2 / 3
-        // re-init
+        val max = if (width > height) width else height
+        val radius: Int = max / 2 + margin
         this.view = activity.findViewById(android.R.id.content)
         this.positions = listOf(xCenter, yCenter)
         this.radius = radius
@@ -60,7 +60,7 @@ class CoachMark constructor(
         return this
     }
 
-    fun square(activity: Activity): CoachMark {
+    fun square(activity: Activity, margin: Int = 20): CoachMark {
         val location = IntArray(2)
         view?.getLocationInWindow(location)
 
@@ -71,8 +71,6 @@ class CoachMark constructor(
         val xEnd: Int = location[0] + width
         val yEnd: Int =
             location[1] + height - CoachMarkDialog.getStatusBarHeight(activity)
-        // re-init
-        val margin = 20
         this.view = activity.findViewById(android.R.id.content)
         this.positions = listOf(xStart - margin, yStart - margin, xEnd + margin, yEnd + margin)
         this.isBackground = true // must
@@ -82,7 +80,7 @@ class CoachMark constructor(
     open class Builder : Parcelable {
         private var fragmentActivity: FragmentActivity? = null
         private var coachMarks: List<CoachMark>? = null
-        var layoutView = R.layout.layout_coachmark
+        var layoutView = R.layout.cm
         var textTitleColor = 0
         var textDescriptionColor = 0
         var shadowColor = 0
